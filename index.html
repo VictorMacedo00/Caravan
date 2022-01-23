@@ -14,7 +14,9 @@
     <title>Caravan</title>
   </head>
   <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light px-3 py-3 box-shadow">
+    <nav
+      class="navbar navbar-expand-lg navbar-light bg-light px-3 py-3 box-shadow fixed-top"
+    >
       <a class="navbar-brand">
         <img src="./img/caravan.svg" alt="caravan" />
       </a>
@@ -42,7 +44,7 @@
               >Locais</a
             >
             <ul class="dropdown-menu" aria-labelledby="navbarDropwdown">
-              <li><a href="#" class="dropdown-item">California</a></li>
+              <li><a href="#" class="dropdown-item">Califórnia</a></li>
               <li><a href="#" class="dropdown-item">Paris</a></li>
               <li><a href="#" class="dropdown-item">Dublin</a></li>
             </ul>
@@ -64,6 +66,66 @@
         </ul>
       </div>
     </nav>
+    <section class="container-fluid bg-dark">
+      <div class="row">
+        <div class="col-lg-7 p-0">
+          <div id="carouselCities" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+              <button type="button" data-bs-target="#carouselCities" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+              <button type="button" data-bs-target="#carouselCities" data-bs-slide-to="1" aria-label="Slide 2"></button>
+              <button type="button" data-bs-target="#carouselCities" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="./img/california.jpg" class="d-block w-100" alt="...">
+                <div class="carousel-caption">
+                  <h1 class="display-1">Califórnia</h1>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img src="./img/paris.jpg" class="d-block w-100" alt="...">
+                <div class="carousel-caption">
+                  <h1 class="display-1">Paris</h1>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img src="./img/dublin.jpg" class="d-block w-100" alt="...">
+                <div class="carousel-caption">
+                  <h1 class="display-1">Dublin</h1>
+                </div>
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselCities" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselCities" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+        </div>
+        <div class="col-lg-5 p-5 text-white">
+          <h1 class="display-3">Realize a viagem dos seu sonhos</h1>
+          <p class="lead">
+            O melhor local para viajar é com a Caravan, mais de 5.000 excursões
+            concluídas.
+          </p>
+          <div class="input-group input-group-lg">
+            <input
+              type="text"
+              class="form-control"
+              placeholder="Email"
+              aria-label="Email"
+              aria-describedby="button-addon1"
+            />
+            <button class="btn btn-primary" type="button" id="button-addon1">
+              Inscreva-se
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
 
     <!-- Scripts -->
     <script
