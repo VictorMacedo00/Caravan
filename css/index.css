@@ -9,3 +9,17 @@ body {
 .icon {
   height: 120px;
 }
+
+#home-quote {
+  background: url("../img/bg-quote.jpg") center center;
+  background-size: cover;
+}
+
+@media (max-width: 767px) {
+  body {
+    margin-top: 0px;
+  }
+  .fixed-top {
+    position: relative;
+  }
+}
