@@ -15,12 +15,19 @@ body {
   background-size: cover;
 }
 
+#contatos {
+  margin-top: 150px;
+}
+
 @media (max-width: 767px) {
   body {
     margin-top: 0px;
   }
   .fixed-top {
     position: relative;
+  }
+  #contatos {
+    margin-top: 0px;
   }
 }
 

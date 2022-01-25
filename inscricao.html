@@ -11,7 +11,7 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="./css/index.css" />
-    <title>Caravan - Planos</title>
+    <title>Caravan - Inscrição</title>
   </head>
   <body>
     <!-- modal -->
@@ -89,13 +89,13 @@
               >Locais</a
             >
             <ul class="dropdown-menu" aria-labelledby="navbarDropwdown">
-              <li><a href="local.html" class="dropdown-item">Califórnia</a></li>
-              <li><a href="local.html" class="dropdown-item">Paris</a></li>
-              <li><a href="local.html" class="dropdown-item">Dublin</a></li>
+              <li><a href="planos.html" class="dropdown-item">Califórnia</a></li>
+              <li><a href="planos.html" class="dropdown-item">Paris</a></li>
+              <li><a href="planos.html" class="dropdown-item">Dublin</a></li>
             </ul>
           </li>
           <li class="nav-item">
-            <a href="planos.html" class="nav-link active" aria-current="page">Planos</a>
+            <a href="planos.html" class="nav-link" aria-current="page">Planos</a>
           </li>
           <li class="nav-item">
             <a href="contatos.html" class="nav-link" aria-current="page">Contato</a>
@@ -119,40 +119,119 @@
       </div>
     </nav>
 
-    <section class="container py-5 text-center">
-      <div class="text-center my-5">
-        <span class="h6 d-block">SEU PLANO, SUA VIAGEM</span>
-        <h1 class="display-4 text-primary">Escolha o Plano</h1>
+    <section class="container" id="contatos">
+      <div class="container my-5 text-center">
+        <span class="h6 d-block">PROGRAME A VIAGEM DOS SEUS SONHOS</span>
+        <h1 class="display-4 text-primary">INSCREVA-SE</h1>
       </div>
-      <div class="row justify-content-center">
-        <div class="col-md-5 pb-4">
-          <div
-            class="bg-light p-4 box-shadow rounded"
-          >
-            <h2 class="text-start">Gold</h2>
-            <ul class="text-start list-unstyled">
-              <li class="py-2"><span data-bs-toggle="tooltip" data-bs-placement="top" title="Isso mesmo, são 30 dias totais durante a viagem.">→ 30 dias de viagem</span></li>
-              <div class="dropdown-divider"></div>
-              <li class="py-2">→ 3 destinos diferentes</li>
-              <div class="dropdown-divider"></div>
-              <li class="py-2">→ Tudo pago pela empresa</li>
-              <div class="dropdown-divider"></div>
-              <li class="py-2">→ Ingressos para festas</li>
-              <div class="dropdown-divider"></div>
-            </ul>
-            <select class="form-select" aria-label="Default select example">
-              <option selected disabled>Selecone a Cidade</option>
-              <option value="1">Califórnia</option>
-              <option value="2">Paris</option>
-              <option value="3">Dubin</option>
-            </select>
-            <div class="d-flex justify-content-start pt-4">
-              <button class="btn btn-lg btn-block me-4 btn-primary align-self-start">Comprar Plano</button>
-              <p class="h3 align-self-center"> R$5.000</p>
+      <div class="row">
+        <form class="col-md-6" action="">
+          <div class="row mb-3">
+            <div class="form-group col-md-6 col-12 mb-3">
+              <label for="input-nome">Nome</label>
+              <input type="text" class="form-control" id="input-nome" placeholder="Nome completo">
+            </div>
+            <div class="form-group col-md-6 col">
+              <label for="input-cpf">CPF</label>
+              <input type="text" class="form-control" id="input-cpf" placeholder="xxx.xxx.xxx-xx">
             </div>
           </div>
-        </div>
-        <div class="col-md-5">
+          <div class="row mb-3">
+            <div class="form-group col-md-6 col-12 mb-3">
+              <label for="input-email">Email</label>
+              <input type="text" class="form-control" id="input-email" placeholder="Seu Email">
+            </div>
+            <div class="form-group col-md-6 col">
+              <label for="input-senha">Senha</label>
+              <input type="text" class="form-control" id="input-senha" placeholder="Senha de Acesso">
+            </div>
+          </div>
+          <div class="row mb-3">
+            <div class="form-group col">
+              <label for="input-endereco">Endereço</label>
+              <input type="text" class="form-control" id="input-endereco" placeholder="Número, nome da rua e bairro">
+            </div>
+          </div>
+          <div class="row mb-3">
+            <div class="form-group col-md-6 col-12 mb-3">
+              <label for="input-cidade">Cidade</label>
+              <input type="text" class="form-control" id="input-cidade">
+            </div>
+            <div class="form-group col-md-3 col-6">
+              <label for="input-estado">Estado</label>
+              <select type="text" class="form-control" id="input-estado">
+                <option selected disabled value="">Selecione</option>
+                <option value="rio-de-janeiro">Rio de Janeiro</option>
+                <option value="sao-paulo">São Paulo</option>
+              </select>
+            </div>
+            <div class="form-group col-md-3 col-6">
+              <label for="input-cep">CEP</label>
+              <input type="text" class="form-control" id="input-cep" placeholder="xxxxx-xxx">
+            </div>
+          </div>
+
+          <div class="bg-light p-3 mb-4">
+            <h2 class="text-start h6 text-primary">PLANO ESCOLHIDO</h2>
+            <nav class="nav btn-group mb-3" id="formaPagamento" role="tablist">
+              <button type="button" class="btn btn-secondary active btn-sm" id="nav-cartao-tab" data-bs-toggle="tab" data-bs-target="#nav-cartao" role="tab" aria-controls="nav-cartao" aria-selected="true">Cartão de Crédito</button>
+              <button type="button" class="btn btn-secondary btn-sm" id="nav-boleto-tab" data-bs-toggle="tab" data-bs-target="#nav-boleto" role="tab" aria-controls="nav-boleto" aria-selected="false">Boleto Bancário</button>
+            </nav>
+            <div class="tab-content" id="formaPagamentoConteudo">
+              <div class="tab-pane fade show active" id="nav-cartao" role="tabpanel" aria-labelledby="nav-cartao-tab">
+                <div class="row">
+                  <div class="form-group col-md-6 col-12 mb-3">
+                    <label for="input-nome">Nome</label>
+                    <input type="text" class="form-control" id="input-cep" placeholder="Nome impresso no cartão">
+                  </div>
+                  <div class="form-group col-md-3 col-6 mb-3">
+                    <label for="input-mes">Mês</label>
+                    <select type="text" class="form-control" id="input-mes">
+                      <option selected disabled value="">Expira mês</option>
+                      <option value="01">01</option>
+                      <option value="02">02</option>
+                      <option value="03">03</option>
+                      <option value="04">04</option>
+                      <option value="05">05</option>
+                    </select>
+                  </div>
+                  <div class="form-group col-md-3 col-6 mb-3">
+                    <label for="input-ano">Ano</label>
+                    <select type="text" class="form-control" id="input-ano">
+                      <option selected disabled value="">Expira ano</option>
+                      <option value="2022">2022</option>
+                      <option value="2023">2023</option>
+                      <option value="2024">2024</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="form-group col-md-6 col-6 mb-3">
+                    <label for="input-numero-cartao">Número do Cartão</label>
+                    <input type="number" class="form-control" id="input-numero-cartao" placeholder="5555 5555 5555 5555">
+                  </div>
+                  <div class="form-group col-md-6 col-6 mb-3">
+                    <label for="input-codigo-seguranca">Código de Segurança</label>
+                    <input type="number" class="form-control" id="input-codigo-seguranca" placeholder="XXX">
+                  </div>
+                </div>
+              </div>
+              <div class="tab-pane fade" id="nav-boleto" role="tabpanel" aria-labelledby="nav-boleto-tab">
+                <p class="lead">Clique em contratar plano que enviaremos um boleto para o seu e-mail.</p>
+              </div>
+            </div>
+          </div>
+          <div class="form-check mb-3">
+            <label class="form-check-label">
+              <input type="checkbox" class="form-check-input">
+              Concordo com os <a href="#">Termos e Condições.</a>
+            </label>
+          </div>
+          <button type="submit" class="btn btn-lg btn-primary mb-5">Contratar Planos</button>
+
+        </form>
+        <div class="col-md-6 order-first order-md-1 mb-4">
+          <h2 class="text-start h6 text-primary">PLANO ESCOLHIDO</h2>
           <div
             class="bg-light p-4 box-shadow rounded"
           >
@@ -174,7 +253,6 @@
               <option value="3">Dubin</option>
             </select>
             <div class="d-flex justify-content-start pt-4">
-              <button class="btn btn-lg btn-block me-4 btn-primary align-self-start">Comprar Plano</button>
               <p class="h3 align-self-center"> R$7.500</p>
             </div>
           </div>
@@ -182,7 +260,7 @@
       </div>
     </section>
 
-    <footer class="bg-dark text-white mt-5">
+    <footer class="bg-dark text-white">
       <div class="container py-4">
         <div class="row">
           <div class="col-md-3">
